@@ -1,10 +1,10 @@
-function App() {
-  return (
-    <p className="font-black">
-      Edit <code>src/App.tsx</code> and save to reload.
-    </p>
-  )
-}
+import React from "react";
+import UserHomePages from "../pages/Home/UserHomePages";
 
-export default App
+const App: React.FC = () => {
+    return (
+        <UserHomePages title="ユーザーのホームページ" />
+    );
+};
 
+export default App;
