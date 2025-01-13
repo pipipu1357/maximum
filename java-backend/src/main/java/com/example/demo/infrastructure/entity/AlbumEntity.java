@@ -22,4 +22,6 @@ public class AlbumEntity {
 
     private LocalDate releaseDate; // アルバムリリース日
 
+    //test
+
 }
