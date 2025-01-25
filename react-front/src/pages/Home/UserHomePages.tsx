@@ -19,7 +19,7 @@ const UserHomePages: React.FC<UserHomePagesProps> = ({ title }) => {
       />
       <Button
         label="ディスコグラフィー"
-        onClick={handleButtonClick}
+        onClick={() => navigate('/discography')}
         className="hover:bg-blue-700 focus:ring-2 focus:ring-blue-400"
       />
       <Button
