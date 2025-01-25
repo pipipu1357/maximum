@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { handleHomeBackClick } from '../home/event/event'
 
 const UserDiscographyPages: React.FC = () => {
   const navigate = useNavigate()
@@ -23,10 +24,10 @@ const UserDiscographyPages: React.FC = () => {
         {/* ここにシングルのリストを表示する */}
       </div>
       <button
-        onClick={() => navigate('/')}
+        onClick={() => handleHomeBackClick(navigate)}
         className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-400"
       >
-        もどる
+        ホームに戻る
       </button>
     </div>
   )
