@@ -24,7 +24,7 @@ const UserHomePages: React.FC<UserHomePagesProps> = ({ title }) => {
       />
       <Button
         label="今日の亮君ガチャ"
-        onClick={handleButtonClick}
+        onClick={() => navigate('/gachagacha')}
         className="hover:bg-blue-700 focus:ring-2 focus:ring-blue-400"
       />
     </div>
