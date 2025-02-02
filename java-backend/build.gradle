@@ -24,15 +24,23 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0'
-	spotbugsPlugins("com.mebigfatguy.sb-contrib:sb-contrib:7.6.9")
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// Lombok
 	compileOnly 'org.projectlombok:lombok:1.18.36'
 	annotationProcessor 'org.projectlombok:lombok:1.18.36'
-	runtimeOnly("mysql:mysql-connector-java")
-	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-	implementation("org.mariadb.jdbc:mariadb-java-client")
+	//test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Spotbugs
+	spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0'
+	spotbugsPlugins 'com.mebigfatguy.sb-contrib:sb-contrib:7.6.9'
+
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	implementation 'org.mariadb.jdbc:mariadb-java-client'
+
+
 }
 checkstyle {
 	configFile = file("src/main/resources/config/checkstyle/google_checks.xml")
